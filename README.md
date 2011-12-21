@@ -58,6 +58,8 @@ continue to lock just the selected records.
 
 ## Example
 
+    require "active_record/locking/fatalistic"
+
     class Person < ActiveRecord::Base
     end
 
