@@ -34,9 +34,9 @@ goal. However, they can be useful when used sparingly.
 
 Active Record supports row-level locking, but not table locking.
 
-If you do something like `Person.lock` with Active Record will emit the query
-`SELECT * FROM people FOR UPDATE`. This is bad for performance because if you
-have a lot of rows, it's going to be very slow. It's also nearly useless,
+If you do something like `Person.lock` with Active Record, it will emit the
+query `SELECT * FROM people FOR UPDATE`. This is bad for performance because if
+you have a lot of rows, it's going to be very slow. It's also nearly useless,
 because it still doesn't prevent new records from being inserted. Finally, it's
 foolish because if you want to lock every row in a table, it makes much more
 sense to lock the table itself.
